@@ -19,13 +19,7 @@ Port to CoffeeScript from [http://code.google.com/p/form-serialize/][adaptation]
 
 ```js
 var form = document.getElementsByTagName('form')[0];
-var serialized = serialize(form);
-```
-
-will become
-
-```js
-fullname=James%20Bond&email=email%40example.com
+var serialized = serialize(form); // fullname=James%20Bond&email=email%40example.com
 ```
 # Demo
 [View Demo][demo]
