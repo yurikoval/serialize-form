@@ -4,9 +4,9 @@ Port to CoffeeScript from [http://code.google.com/p/form-serialize/][adaptation]
 
 ## Download
 - [CoffeeScript](https://raw.github.com/yurikoval/serialize-form/master/serialize.js.coffee)
-- [Javascript](https://raw.github.com/yurikoval/serialize-form/master/serialize.js)
-- [Minified](https://raw.github.com/yurikoval/serialize-form/master/serialize.min.js)
-- [Packed](https://raw.github.com/yurikoval/serialize-form/master/serialize.packed.js)
+- [Javascript](https://raw.github.com/yurikoval/serialize-form/master/serialize.js) <sub><sup>1836B (100%)</sup></sub>
+- [Minified](https://raw.github.com/yurikoval/serialize-form/master/serialize.min.js) <sub><sup>1147B (62%)</sup></sub>
+- [Packed](https://raw.github.com/yurikoval/serialize-form/master/serialize.packed.js) <sub><sup>1009B (54%)</sup></sub>
 
 ## Usage
 ```html
