@@ -3,8 +3,7 @@ window.serialize = function(f) {
   if (!f || f.nodeName !== "FORM") {
     return;
   }
-  i = void 0;
-  j = void 0;
+  i = j = void 0;
   q = [];
   i = f.elements.length - 1;
   while (i >= 0) {

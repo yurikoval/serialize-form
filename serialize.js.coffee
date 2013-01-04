@@ -1,7 +1,6 @@
 window.serialize = (f) ->
   return if not f or f.nodeName isnt "FORM"
-  i = undefined
-  j = undefined
+  i = j = undefined
   q = []
   i = f.elements.length - 1
   while i >= 0
