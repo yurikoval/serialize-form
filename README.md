@@ -8,6 +8,7 @@ Port to CoffeeScript from [http://code.google.com/p/form-serialize/][adaptation]
 - [Minified](https://raw.github.com/yurikoval/serialize-form/master/serialize.min.js)
 - [Packed](https://raw.github.com/yurikoval/serialize-form/master/serialize.packed.js)
 
+## Usage
 ```html
 <form action="" method="get">
   <input type="text" name="fullname" value="James Bond" />
