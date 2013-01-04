@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Serialize-form by yurikoval</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="javascripts/serialize.js"></script>
+    <style>
+    .form p{
+      margin: 0 0 10px 0;
+      overflow: hidden;
+    }
+    .form p span{
+      float: left;
+      font-weight: bold;
+      width: 150px;
+    }
+    .form .text,
+    .form .select,
+    .form .textarea{
+      border: solid 1px #ABADB3;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      padding: 3px;
+      width: 200px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Serialize-form</h1>
+        <p>Serialize HTML form to string without javascript framework.</p>
+
+        <p class="view"><a href="https://github.com/yurikoval/serialize-form">View the Project on GitHub <small>yurikoval/serialize-form</small></a></p>
+
+
+        <ul>
+          <li><a href="https://raw.github.com/yurikoval/serialize-form/master/serialize.js">Download <strong>Javascript</strong></a></li>
+          <li><a href="https://raw.github.com/yurikoval/serialize-form/master/serialize.js.coffee">Download <strong>CoffeeScript</strong></a></li>
+          <li><a href="https://github.com/yurikoval/serialize-form">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h2>Usage</h2>
+
+<pre><code>var form = document.getElementsByTagName('form')[0];
+var serialized = serialize(form);
+</code></pre>
+
+<h2>Demo</h2>
+<form action="" method="get" class="form">
+      <input type="hidden" name="id" value="32" />
+      <p>
+        <span>Full Name</span>
+        <input type="text" name="fullname" value="James Bond" class="text" />
+      </p>
+      <p>
+        <span>Password</span>
+        <input type="password" name="password" value="1234luggage" class="text" />
+      </p>
+      <p>
+        <span>E-Mail</span>
+        <input type="text" name="email" value="email@example.com" class="text" />
+      </p>
+      <p>
+        <span>File</span>
+        <input type="file" name="attachment" />
+      </p>
+      <p>
+        <span>Gender</span>
+        <select name="gender" class="select">
+          <option value="male" selected="selected">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </p>
+      <p>
+        <span>Job title</span>
+        <select name="job[]" multiple="multiple" size="6" class="select">
+          <option value="web_dev" selected="selected">Web Developer</option>
+          <option value="ui_engineer" selected="selected">UI Engineer</option>
+          <option value="db_admin">DB Administrator</option>
+          <option value="senior_ruby" selected="selected">Senior Ruby Programmer</option>
+          <option value="sap_engineer">SAP Engineer</option>
+        </select>
+      </p>
+      <p>
+        <span>Do you freelance?</span>
+        <input type="radio" name="wish" value="yes" /> Yes
+        <input type="radio" name="wish" value="no" checked="checked" /> No
+      </p>
+      <p>
+        <span>Favorite sport</span>
+        <input type="checkbox" name="sport[]" id="basketball" value="basketball" checked="checked" /> <label for="basketball">Basketball</label><br />
+        <span>&nbsp;</span>
+        <input type="checkbox" name="sport[]" id="football" value="football" checked="checked" /> <label for="football">Football</label><br />
+        <span>&nbsp;</span>
+        <input type="checkbox" name="sport[]" id="volleyball" value="volleyball" /> <label for="volleyball">Volleyball</label><br />
+        <span>&nbsp;</span>
+        <input type="checkbox" name="sport[]" id="ice_hockey" value="ice_hockey" checked="checked" /> <label for="ice_hockey">Ice Hockey</label><br />
+        <span>&nbsp;</span>
+        <input type="checkbox" name="sport[]" id="baseball" value="baseball" /> <label for="baseball">Baseball</label>
+      </p>
+      <p>
+        <span>Info</span>
+        <textarea name="info" class="textarea">Form serialize in pure javascript</textarea>
+      </p>
+      <p>
+        <span>Did you agree with our terms of use?</span>
+        <input type="checkbox" name="agree" value="T" checked="checked" />
+      </p>
+      <p>
+        <input type="button" value="Serialize form" id="btnSerialize" />
+      </p>
+    </form>
+    <h3>Result</h3>
+    <pre><code id="serialize"></code></pre>
+    <script type="text/javascript">
+      document.getElementById("btnSerialize").onclick = function () {
+        document.getElementById("serialize").innerHTML = serialize(document.forms[0]);
+      };
+    </script>
+
+<h3>Adaptation</h3>
+
+<p>Original <a href="http://code.google.com/p/form-serialize/">code</a> by <a href="http://www.bulgaria-web-developers.com/projects/javascript/serialize/">Dimitar Ivanov</a>. Port to CoffeeScript with bugfixes by <a href="http://www.yurikoval.com/about">Yuri Kovalov</a>.
+      </section>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-37395795-1 ");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
