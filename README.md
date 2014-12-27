@@ -26,3 +26,7 @@ var serialized = serialize(form); // fullname=James%20Bond&email=email%40example
 
  [adaptation]: http://code.google.com/p/form-serialize/
  [demo]: http://yurikoval.github.com/serialize-form/
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/yurikoval/serialize-form/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
